@@ -43,9 +43,13 @@ Now, generate the pages
     # this fork only uses pages from DB
 
 # TODO
+* add authentication
+* add rake tasks to generate static sites for db & file system
+* check cashing
+* add template_types
+* cleanup unused code from lib
+* check page preview stragedy 
 
-* lot of stuff
-    
 # Contribute
 Fork away and send me pull requests!
 
