@@ -9,7 +9,7 @@ So, we built FeatherCMS. As the name suggests, its a Do-It-Yourself, lightweight
 # Usage
 Add the gem to your Gemfile
 
-    gem 'feather_cms', git: https://github.com/fluxsaas/feather_cms.git
+    gem 'feather_cms', git: git://github.com/fluxsaas/feather_cms.git, branch: 'engine'
 
 Add the routes:
   
