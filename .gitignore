@@ -7,3 +7,4 @@ spec/dummy/log
 spec/dummy/log/*
 spec/dummy/tmp
 spec/dummy/tmp/*
+spec/dummy/db/development.sqlite3
