@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>
+    Editing page
+    <%= link_to 'Preview', preview_page_path(@page, :preview), class: 'btn', target: '_blank' unless @page.new_record? %>
+  </h1>
+</div>
+
+<%= render 'form' %>

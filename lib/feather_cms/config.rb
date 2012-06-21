@@ -14,7 +14,7 @@ module FeatherCms
 
         template_store_type = :db
         FeatherCms::TemplateCache.init
-
+        
         if defined?(Rails)
           @@config[:layouts] = Dir.entries(Rails.root.to_s + '/app/views/layouts').reject do |i|
             i.start_with?('.', '_', 'feather_layout')

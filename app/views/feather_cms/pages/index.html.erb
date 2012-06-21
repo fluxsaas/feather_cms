@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="page-header">
+    <h1>
+      Pages
+      <%= link_to 'New Page', new_page_path, class: "btn" %>
+    </h1>
+  </div>
+  
+
+  <ul class="thumbnails">
+    <% @pages.each do |page| %>
+      <li class="span3">
+        <div class="thumbnail">
+          <img src="http://placehold.it/260x180" alt="">
+          <h5><%= link_to page.name, page.name %></h5>
+          <p>
+            <%= link_to 'Edit', edit_page_path(page), class: "btn btn-mini" %>
+            <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-mini" %>
+          </p>
+          <h5><span class="label"><%= page.status %></span></h5>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
