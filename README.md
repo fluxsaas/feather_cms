@@ -35,7 +35,8 @@ Install the migrations && migrate
     rake db:migrate
 
 Restart the server && go to
-  open http://0.0.0.0:3000/feather_cms/pages
+  
+    open http://0.0.0.0:3000/feather_cms/pages
 
 Now, generate the pages 
 
