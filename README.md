@@ -6,6 +6,20 @@
 
 So, we built FeatherCMS. As the name suggests, its a Do-It-Yourself, lightweight CMS - just pages, caching and nothing more!
 
+
+# you want to checkout how it looks and works ?
+   
+   git clone https://github.com/fluxsaas/feather_cms.git feather_cms
+   cd feather_cms/spec/dummy
+   bundle install
+   rake feather_cms:install:migrations
+   rake db:create
+   rake db:migrate
+   rails s
+   open http://0.0.0.0:3000/feather_cms/pages
+
+
+
 # Usage
 Add the gem to your Gemfile
 
