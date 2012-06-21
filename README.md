@@ -12,11 +12,13 @@ Add the gem to your Gemfile
     gem 'feather_cms', git: https://github.com/fluxsaas/feather_cms.git
 
 Add the routes:
-  mount FeatherCms::Engine => "/feather_cms"
+  
+    mount FeatherCms::Engine => "/feather_cms"
 
 Install the migrations && migrate
-  rake feather_cms:install:migrations
-  rake db:migrate
+  
+    rake feather_cms:install:migrations
+    rake db:migrate
 
 Restart the server && go to
   open http://0.0.0.0:3000/feather_cms/pages
