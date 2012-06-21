@@ -43,6 +43,7 @@ Now, generate the pages
     # this fork only uses pages from DB
 
 # TODO
+* page show view should be available on root route, not namespaced within engine namespace. 
 * add authentication
 * add rake tasks to generate static sites for db & file system
 * check cashing
