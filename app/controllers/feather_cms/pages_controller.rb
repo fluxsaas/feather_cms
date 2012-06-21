@@ -88,6 +88,7 @@ module FeatherCms
 
     def preview
       @page = Page.where(name: params[:id], status: 'published').first
+      
       # TODO:  DRY
       if @page
         render inline: @page.content, type: @page.template_type,  layout: @page.layout
@@ -103,6 +104,7 @@ module FeatherCms
 
     def published
       @page = Page.where(name: params[:id], status: 'published').first
+      
       # TODO:  DRY
       if @page
         render inline: @page.content, type: @page.template_type,  layout: @page.layout
@@ -114,12 +116,6 @@ module FeatherCms
           render :status => 404
         end
       end
-    end
-
-    def find_page
-      status = params[:page] ? params[:page][:status] : (params[:status] || 'draft')
-      @page = Page.where(name: params[:id], status: status)
-      @page = @page.first || @page.new
     end
 
   end
