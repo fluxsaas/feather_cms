@@ -9,45 +9,25 @@ So, we built FeatherCMS. As the name suggests, its a Do-It-Yourself, lightweight
 # Usage
 Add the gem to your Gemfile
 
-    gem 'feather_cms'
+    gem 'feather_cms', git: https://github.com/fluxsaas/feather_cms.git
+
+Add the routes:
+  mount FeatherCms::Engine => "/feather_cms"
+
+Install the migrations && migrate
+  rake feather_cms:install:migrations
+  rake db:migrate
+
+Restart the server && go to
+  open http://0.0.0.0:3000/feather_cms/pages
 
 Now, generate the pages 
 
-    # Use file system to store pages( default: public/system/templates)
-    $ rails g feather_cms about_us jobs team
-    
-    #Use db to store pages
-    $ rails g feather_cms about_us jobs team 
-    
-    $ rake db:migrate
-
-This generates a route, the controller action and the view for each page. Start the server and use the URL http://localhost:3000/feathers/pages to go to the admin panel. 
-
-This has basic HTTP authentication setup.The default username and password are feather/password and you can change this in feathers_controller.rb
-
-      http_basic_authenticate_with name: 'feather', password: 'password', except: :published
-
-Template types can be added in the feather_cms initializer 
-
-   eg. c.template_types = ["html", "haml"]
-
-# Features
-
-* Creates a route for each static page.
-* Caching the static pages.
-* Creates the view in app/views/feathers folder
-* Easily customization FeathersController
-* CodeMirror Editor for syntax highlighting. (Default: HTML)
-* Storage is file (default) or database.
-
-# Caveats
-You may need to ensure that the public/system folder exists (for file storage)
+    # this fork only uses pages from DB
 
 # TODO
 
-* Move the basic authentication to the config/initializers/feather_cms.rb
-* Override the default authentication strategy from the controller
-* Move the code from generated controller to the gem (if required)
+* lot of stuff
     
 # Contribute
 Fork away and send me pull requests!
